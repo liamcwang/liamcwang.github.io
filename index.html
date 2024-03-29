@@ -30,6 +30,14 @@
             margin-top: 0cm;
             padding: 0.2cm;
         }
+        h2 {
+           text-align: center;
+           font-size: xx-large;
+           margin: 0.1cm;
+        }
+        .container {
+            margin: 0.1cm;
+        }
         .large-container {
             background-color: rgb(46, 46, 90);
             color: white;
@@ -39,24 +47,32 @@
             padding: 0.2cm;
         }
         .title-container {
-            vertical-align: middle;
-            margin-left: auto;
-            margin-right: auto;
-            width: 80%;
+            margin: 0.2cm auto;
+            width: 60%;
+            max-height: 12cm;
+            position: relative;
         }
         img {
+            display: block;
             max-width: 100%;
+            max-height: 100%;
+            margin: 0 auto;
         }
+
     </style>
     <body>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <h1>Liam Wang's Game Portfolio</h1>
-        <div class="large-container"> <h2 style="margin-top: 0cm;">Totally Tanktical</h2>
+        <div class="large-container"> 
             <div class="title-container">
-                <img src="Pictures/TotallyTankticalTitle.png"/>
+                <h2>Totally Tanktical</h2>
+                <div class="img-container">
+                <img src="Pictures/TotallyTankticalTitle.png" alt="Image of TotallyTankical main menu"/>
+                </div>
             </div>
+            <div class="container">
             <p class="description">Submachines: Totally Tanktical is a topdown, tankbuilding, rts-like game, where you construct a tank from modular parts to combat other tanks made of parts, in a post-apocalyptic world where mankind has reestablished civilization under the sea.</p>
             <p>I was brought onto this project and made to be the lead programmer.</p>
             <p>Programming-wise, our programming team inherited the project in a difficult to work with state, 
@@ -82,7 +98,7 @@
                     There was no visual before this system was implemented. Before I could add in a working system, I had to venture into many scripts and fix many bugs that were due to the old system not being designed to work with a visual from the start.
                 </li>
             </ul>
-            
+        </div>
             <p>Systems I remade:</p>
             <ul>
                 <li>Camera movement:
@@ -92,37 +108,54 @@
                     I rebuilt the systems that were responsible for assigning the right textures for the blocks when being attached and detached from tanks. The old system was difficult to work with, and was a constant source of trouble. I later expanded the systems to handle assigning proper textures for the different damaged states of blocks. It was important to me to make it easy for others to add new kinds of blocks to the system, as well as make it easy to assign the proper material.
                 </li>
             </ul>
+            <div class="title-container">
+                <h2>DELETE SYSTEM 32</h2>
+                <a href="https://ildarsupron.itch.io/c-delete-system-32">
+                    <div class="img-container">
+                    <img src="Pictures/DelSys32Title.png" alt="Image of DELETE SYSTEM 32 ending">
+                    </div>
+                </a>
+            </div>
+            <!-- add link to game and image -->
+            <div class="container">
+                <p class="description">"DELETE SYSTEM 32" is a sci-fi, shmup game where you play as a rogue computer virus attempting to destroy a computer's operating system. You are thwarted by the system's antivirus software, and must destroy it to achieve your goal.</p>
+                <p>I was the sole programmer for this game.</p>
+                <p>Game features:</p>
+                <ul>
+                    <li>A finite state machine for the different enemy AI behaviors.</li>
+                    <li>Randomly generating the towers that have corresponding enemy spawners.</li>
+                    <li>Making the screen endlessly scroll.</li>
+                    <li>Powerups for the player ship.</li>
+                    <li>Cardinal movement system, and the ability to freely rotate to aim</li>
+                    <li>Modular UI for non-programmers to build with</li>
+                </ul>
+            </div>
             
-            <h2>DELETE SYSTEM 32</h2>
             <!-- add link to game and image -->
-            <p class="description">"DELETE SYSTEM 32" is a sci-fi, shmup game where you play as a rogue computer virus attempting to destroy a computer's operating system. You are thwarted by the system's antivirus software, and must destroy it to achieve your goal.</p>
-            <p>I was the sole programmer for this game.</p>
-            <p>Game features:</p>
-            <ul>
-                <li>A finite state machine for the different enemy AI behaviors.</li>
-                <li>Randomly generating the towers that have corresponding enemy spawners.</li>
-                <li>Making the screen endlessly scroll.</li>
-                <li>Powerups for the player ship.</li>
-                <li>Cardinal movement system, and the ability to freely rotate to aim</li>
-                <li>Modular UI for non-programmers to build with</li>
-            </ul>
+            <div class="title-container">
+                <h2>Ship Shoot
+                </h2>
+                <a href="https://chowr.itch.io/ship-shoot">
+                    <div class="img-container">
+                    <img style="height: 10cm;" src="Pictures/ShipShootTitle.png" alt="Image of DELETE SYSTEM 32 ending">
+                </div>
+                </a>
+            </div>
+            <div class="container">
+                <p class="description">"Ship Shoot" is a sci-fi, arcade, shmup game where you are a traveling combat ship. You are confronted by waves of enemy ships that attempt to shoot you down.</p>
+                <p>This was my first game, I made it in two weeks during the "My First Game Jam" jam on Itch.io. It was my first time trying to create a playable game using Scratch. Every asset and feature was made by me. </p>
+                <p> It taught me many of the finer details of how video games work from an almost no engine baseline, and it's a reminder of how far I've come, and how much I understood even without much background in programming at the time.
+                </p>
 
-            <h2>Ship Shoot
-            </h2>
-            <!-- add link to game and image -->
-            <p class="description">"Ship Shoot" is a sci-fi, arcade, shmup game where you are a traveling combat ship. You are confronted by waves of enemy ships that attempt to shoot you down.</p>
-            <p>This was my first game, I made it in two weeks during the "My First Game Jam" jam on Itch.io. It was my first time trying to create a playable game using Scratch. Every asset and feature was made by me. </p>
-            <p> It taught me many of the finer details of how video games work from an almost no engine baseline, and it's a reminder of how far I've come, and how much I understood even without much background in programming at the time.
-            </p>
-
-            <p>It features:</p>
-            <ul>
-                <li>Custom hit detection</li>
-                <li>Custom entity tracking system</li>
-                <li>Custom projectile object system</li>
-                <li>Custom Enemy AI</li>
-                <li>Custom Text Printing</li>
-            </ul>
+                <p>It features:</p>
+                <ul>
+                    <li>Custom hit detection</li>
+                    <li>Custom entity tracking system</li>
+                    <li>Custom projectile object system</li>
+                    <li>Custom Enemy AI</li>
+                    <li>Custom Text Printing</li>
+                </ul>
+            </div>
         <script src="" async defer></script>
     </body>
 </html>
