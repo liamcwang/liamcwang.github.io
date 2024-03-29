@@ -14,13 +14,13 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0cm;
-    background-color: chocolate;
+    background-color: #17252a;
 }
 
 h1 {
     font-family: "league_spartanbold", Arial, Helvetica, sans-serif;
 
-    color: wheat;
+    color: #3aafa9;
     max-width: 1200px;
     text-align: center;
     margin: 0 auto;
@@ -43,28 +43,23 @@ h2 {
 .container {
     margin-top: 0.1cm;
     margin-bottom: 0.1cm;
-
-
 }
 
 .large-container {
-    background-color: rgb(224, 205, 194);
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0.4cm 0.2cm;
+    background-color: #2b7a7b;
 }
 
 .content {
-    background-color: rgb(241, 237, 227);
-    color: black;
-    margin-left: 5%;
-    margin-right: 5%;
+    background-color: #feffff;
+    color: #272727;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
     padding: 0.2cm 0.2cm;
 }
 
 .title-container {
-    margin: 0.2cm auto;
+    margin: 0.1cm auto;
 }
 
 .img-container {
@@ -76,7 +71,7 @@ h2 {
 
 img {
     padding: 0.2cm;
-    background-color: brown;
+    background-color: #def2f1;
     display: block;
     max-width: 100%;
     max-height: 100%;
