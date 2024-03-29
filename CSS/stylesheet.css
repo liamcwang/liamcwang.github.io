@@ -34,6 +34,12 @@ h2 {
     margin: 0.1cm;
 }
 
+.img-container a {
+    display: block;
+    text-align: center;
+    margin: 0.1cm auto;
+}
+
 .container {
     margin-top: 0.1cm;
     margin-bottom: 0.1cm;
@@ -59,9 +65,13 @@ h2 {
 
 .title-container {
     margin: 0.2cm auto;
+}
+
+.img-container {
     width: 60%;
     max-height: 12cm;
     position: relative;
+    margin: 0.2cm auto;
 }
 
 img {
