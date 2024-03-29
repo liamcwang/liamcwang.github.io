@@ -23,10 +23,7 @@ h1 {
     color: wheat;
     max-width: 1200px;
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 0.5cm;
-    margin-top: 0cm;
+    margin: 0 auto;
     padding: 0.2cm;
 }
 
@@ -49,7 +46,7 @@ h2 {
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
-    padding: 0.2cm;
+    padding: 0.4cm 0.2cm;
 }
 
 .content {
