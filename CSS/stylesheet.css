@@ -15,15 +15,31 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0cm;
     color: #272727;
+    background-color: #2b7a7b;
 }
+
+header {
+    background-color: #17252a;
+    padding: .2cm;
+}
+
+#contacts {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+
+}
+
+
 
 h1 {
     font-family: "league_spartanbold", Arial, Helvetica, sans-serif;
     max-width: 1200px;
 
+    color: #3aafa9;
+
     text-align: center;
     margin: 0 auto;
-    padding: 0.2cm;
 }
 
 h2 {
@@ -31,6 +47,19 @@ h2 {
     text-align: center;
     font-size: xx-large;
     margin: 0.1cm;
+}
+
+.header-link {
+    display: inline-block;
+    margin: 5px;
+    border-color: #3aafa9;
+    border-width: 3px;
+    border-style: solid;
+    padding: .2cm;
+}
+
+.header-link a {
+    color: #3aafa9;
 }
 
 .img-container a {
