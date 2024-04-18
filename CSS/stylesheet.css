@@ -75,8 +75,7 @@ h2 {
 }
 
 .container {
-    margin-top: 0.1cm;
-    margin-bottom: 0.1cm;
+    margin: 0.1cm 0.2cm;
 }
 
 .large-container {
