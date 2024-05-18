@@ -10,9 +10,8 @@
         <title>Liam Wang's Game Portfolio</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="/CSS/general.css">
-        <link rel="stylesheet" href="/CSS/home.css">
-        <script src="heading.js" async defer></script>
+        <link rel="stylesheet" href="CSS/stylesheet.css">
+        <script src="index.js" async defer></script>
     </head>
     <style>
         
@@ -21,7 +20,21 @@
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <header id="header"></header>
+        <header>
+        
+        <h1>Liam Wang's Game Portfolio</h1>
+        <div id="contacts">
+            <div class="header-link">
+                <a href="https://www.linkedin.com/in/liam-c-wang/">LinkedIn</a>
+            </div>
+            <div class="header-link">
+                <a href="https://github.com/liamcwang">Github</a>
+            </div>
+            <div class="header-link">
+                <a href="mailto:liamcwang@gmail.com">Email</a>
+            </div>
+        </div>
+        </header>
         <div class="large-container"> 
             
             <div class="content">
@@ -34,48 +47,51 @@
                 <img src="Pictures/TotallyTankticalTitle.png" alt="Image of TotallyTankical main menu"/>
             </div>
             <div class="container">
-                <p class="description">"Submachines: Totally Tanktical" is a topdown, tankbuilding, rts-like game, where you construct a tank from modular parts to combat other tanks made of parts, in a post-apocalyptic world where mankind has reestablished civilization under the sea.</p>
-                <p>I was brought onto this student project and made to be the lead programmer.</p>
-                <p>Programming-wise, our programming team inherited the project in a prototype state and were tasked with adding to it. This involved remaking many important system that had convoluted algorithms, confusing architecture, compounded by a lack of proper documentation. As the project progressed, we managed to remake or replace these systems and made them simpler and easier to work with, as well as improve the overall quality of the systems in the game.</p>
-                <p>My responsibilities and priorities were:</p>
+            <p class="description">"Submachines: Totally Tanktical" is a topdown, tankbuilding, rts-like game, where you construct a tank from modular parts to combat other tanks made of parts, in a post-apocalyptic world where mankind has reestablished civilization under the sea.</p>
+            <p>I was brought onto this project and made to be the lead programmer.</p>
+            <p>Programming-wise, our programming team inherited the project in a prototype state 
+                and were tasked with adding to it. This involved remaking many important system that had convoluted 
+                algorithms, confusing architecture, compounded by a lack of proper documentation. As the project progressed, 
+                we managed to remake or replace these systems and made them simpler and easier to work with, and 
+                overall improving the quality of the systems in the game.</p>
+            <p>My responsibilities and priorities were:</p>
             
-                <ul>
-                    <li>Communicate with the product owners to determine what features they wanted in the game</li>
-                    <li>Ensure that the product owners were kept up to date on all programming tasks, as well as describe the technical problems in a way they could understand</li>
-                    <li>Delegate tasks to programmers to ensure each member knew what each was doing without stepping on each other's toes and establishing priorities of what needed to get finished before moving on to other things.</li>
-                    <li>Keep up to date with every member of the programming team and the work they were doing, giving feedback and having peer discussions about their work.</li>
-                    <li>Create tools and libraries that other members of the team could use, such as the designers, artists, and other programmers.</li>
-                    <li>Manage a PlasticSCM repo for our version control, ensuring that people were using it properly so that everyone could work on the project simultaneously</li>
-                    <li>Assemble the builds for the game, rallying other members to get their changes in on time, and making bug fixes and adjustments as needed for the game</li>
-                    <li>Showing off the game at expo events, like PAX East and the Clark IGDA expo.</li>
-                </ul>
+            <ul>
+                <li>Communicate with the product owners to determine what features they wanted in the game</li>
+                <li>Ensure that the product owners were kept up to date on all programming tasks, as well as describe the technical problems in a way they could understand</li>
+                <li>Delegate tasks to programmers to ensure each member knew what each was doing without stepping on each other's toes and establishing priorities of what needed to get finished before moving on to other things.</li>
+                <li>Keep up to date with every member of the programming team and the work they were doing, giving feedback and having peer discussions about their work.</li>
+                <li>Create tools and libraries that other members of the team could use, such as the designers, artists, and other programmers.</li>
+                <li>Manage a PlasticSCM repo for our version control, ensuring that people were using it properly so that everyone could work on the project simultaneously</li>
+                <li>Assemble the builds for the game, rallying other members to get their changes in on time, and making bug fixes and adjustments as needed for the game</li>
+                <li>Showing off the game at expo events, like PAX East and the Clark IGDA expo.</li>
+            </ul>
             
-                <p>Systems I worked on:</p>
-                <ul>
-                    <li>Block pre-placement visual:
-                        There was no visual before this system was implemented. It required carefully navigating the existing implementation, and a few hacky lines that were necessary due to the project relying heavily on OOP and inheritance. It revealed some concerning performance heavy algorithms related to placing blocks that I later documented.
-                    </li>
-                    <li>
-                        Automatic object initializer:
-                        Using Unity's Editor namespace, I created a way to initialize necessary objects for scenes, as opposed to needing the game designers to put it in manually. The tool would load in a prefab to the scene when it was loaded in the editor, and if it was in the list of scenes that needed to have objects loaded, it would load them.
-                    </li>
-                </ul>
-                <p>Systems I remade:</p>
-                <ul>
-                    <li>Camera movement:
-                        I rebuilt the camera system that was overly complicated and difficult to work with, into a slimmed down system with the same functionality. It has the ability to zoom in and out, pan away from the tank and snap back to it, and the ability to rotate around the object of interest. The previous system relied heavily on raycasts, which was buggy and difficult to understand.
-                    </li>
-                    <li>Material Assignment:
-                        I rebuilt the systems that were responsible for assigning the right textures for the blocks when being attached and detached from tanks. The old system was difficult to work with, as the previous coder had introduced multiple steps to reassigning materials, and it was a constant source of trouble. I later expanded the systems to handle assigning proper textures for the different damaged states of blocks. It was important to me to make it easy for others to add new kinds of blocks to the system, as well as make it easy to assign the proper materials.
-                    </li>
-                </ul>
+            <p>Systems I worked on:</p>
+            <ul>
+                <li>Block pre-placement visual:
+                    There was no visual before this system was implemented. It required carefully navigating the existing implementation, and a few hacky lines that were necessary due to the project relying heavily on OOP and inheritance. It revealed some concerning performance heavy algorithms related to placing blocks that I later documented.
+                </li>
+                <li>
+                    Automatic object initializer:
+                    Using Unity's Editor namespace, I created a way to initialize necessary objects for scenes, as opposed to needing the game designers to put it in manually. The tool would load in a prefab to the scene when it was loaded in the editor, and if it was in the list of scenes that needed to have objects loaded, it would load them.
+                </li>
+            </ul>
+            <p>Systems I remade:</p>
+            <ul>
+                <li>Camera movement:
+                    I rebuilt the camera system that was overly complicated and difficult to work with, into a slimmed down system with the same functionality. It has the ability to zoom in and out, pan away from the tank and snap back to it, and the ability to rotate around the object of interest. The previous system relied heavily on raycasts, which was buggy and difficult to understand.
+                </li>
+                <li>Material Assignment:
+                    I rebuilt the systems that were responsible for assigning the right textures for the blocks when being attached and detached from tanks. The old system was difficult to work with, as the previous coder had introduced multiple steps to reassigning materials, and it was a constant source of trouble. I later expanded the systems to handle assigning proper textures for the different damaged states of blocks. It was important to me to make it easy for others to add new kinds of blocks to the system, as well as make it easy to assign the proper materials.
+                </li>
+            </ul>
             </div>
             <div class="title-container">
                 <h2>DELETE SYSTEM 32</h2>    
             </div>
             <div class="img-container">
                     <img src="Pictures/DelSys32Title.png" alt="Image of DELETE SYSTEM 32 ending">
-                    <a href="WebBuilds/DELETESYSTEM32_V2.2_WEB/delSys32.html"> Play It Now!</a>
                     <a href="https://ildarsupron.itch.io/c-delete-system-32">
                         View game on itch.io
                     </a>
@@ -96,6 +112,7 @@
                 </ul>
             </div>
             
+            <!-- add link to game and image -->
             <div class="title-container">
                 <h2>Ship Shoot</h2>
             </div>
