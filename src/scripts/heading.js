@@ -12,7 +12,7 @@ function loadHeader() {
         .then(response => response.text())
         .then(data => {
             document.getElementById('header').innerHTML = data;
-            document.getElementById('home-link').setAttribute('href', `${rootURL}/src/pages/index.html`)
+            document.getElementById('home-link').setAttribute('href', `${rootURL}/index.html`)
         });
 }
 
