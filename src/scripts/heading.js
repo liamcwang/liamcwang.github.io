@@ -13,6 +13,8 @@ function loadHeader() {
         .then(data => {
             document.getElementById('header').innerHTML = data;
             document.getElementById('home-link').setAttribute('href', `${rootURL}/index.html`)
+            document.getElementById('about-me-page').setAttribute('href', `${rootURL}/src/pages/about-me.html`)
+            document.getElementById('contact-page').setAttribute('href', `${rootURL}/src/pages/contact.html`)
         });
 }
 

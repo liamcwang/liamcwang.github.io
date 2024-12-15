@@ -1,0 +1,15 @@
+.contact-links {
+    text-align: center;
+    background: white;
+    padding: 20px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.contact-links a {
+    display: block;
+    margin: 10px 0;
+    text-decoration: none;
+    font-size: 18px;
+    color: #0077b5; /* LinkedIn blue */
+    transition: color 0.3s ease;
+}
