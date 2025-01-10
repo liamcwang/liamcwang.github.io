@@ -41,7 +41,7 @@
             <div class="container">
                 <p class="description">"Submachines: Totally Tanktical" is a topdown, tankbuilding, rts-like game, where you construct a tank from modular parts to combat other tanks made of parts, in a post-apocalyptic world where mankind has reestablished civilization under the sea.</p>
                 <p>I was brought onto this student project and made to be the lead programmer.</p>
-                <p>Programming-wise, our programming team inherited the project in a prototype state and were tasked with adding to it. This involved remaking many important system that had convoluted algorithms, confusing architecture, compounded by a lack of proper documentation. As the project progressed, we managed to remake or replace these systems and made them simpler and easier to work with, as well as improve the overall quality of the systems in the game.</p>
+                <p>Programming-wise, our programming team inherited the project in a prototype state and were tasked with adding to it. This involved remaking many important systems with leaner more robust algorithms, cleaner architecture, and more thorough documentation. As the project progressed, we managed to improve the overall quality of the systems present as well as build on top them to reach our target scope.</p>
                 <p>My responsibilities and priorities were:</p>
             
                 <ul>
@@ -57,30 +57,54 @@
             
                 <p>Systems I worked on:</p>
                 <ul>
+                    <li>
+                        Performance fixes:
+                        At an early stage in the project, we were well below our target 60FPS, instead landing somewhere between 20-30FPS. After investigating possible causes in Unity's profiler, we identified the number of meshes being moved each frame as the cause. To solve this, we disabled the meshes from being active until they were needed for specifically placing blocks, and we successfully hit our target 60FPS. 
+                    </li>
                     <li>Block pre-placement visual:
-                        There was no visual before this system was implemented. It required carefully navigating the existing implementation, and a few hacky lines that were necessary due to the project relying heavily on OOP and inheritance. It revealed some concerning performance heavy algorithms related to placing blocks that I later documented.
+                        Players were having a difficult time seeing where their blocks would be placed when building their tank. So I created a solution that integrated with the existing codebase to place a visual in the game to instantiate an object that would preview a player's placement. Which helped clarify the building functions of the game for players. 
                     </li>
                     <li>
                         Automatic object initializer:
-                        Using Unity's Editor namespace, I created a way to initialize necessary objects for scenes, as opposed to needing the game designers to put it in manually. The tool would load in a prefab to the scene when it was loaded in the editor, and if it was in the list of scenes that needed to have objects loaded, it would load them.
+                        We encountered problems in project organization where some essential items may be missing in the Unity scene. Using Unity's Editor namespace, I created a way to initialize necessary objects for scenes, as opposed to needing the game designers to put it in manually. The tool would load in a prefab to the scene when it was loaded in the editor, and if it was in the list of scenes that needed to have objects loaded, it would load them.
                     </li>
                 </ul>
                 <p>Systems I remade:</p>
                 <ul>
                     <li>Camera movement:
-                        I rebuilt the camera system that was overly complicated and difficult to work with, into a slimmed down system with the same functionality. It has the ability to zoom in and out, pan away from the tank and snap back to it, and the ability to rotate around the object of interest. The previous system relied heavily on raycasts.
+                        The camera system had multiple bugs in its implementation, many of which were due to its heavy reliance on raycasts. I reworked it to a more robust and simpler solution that simply took the user's cursor input on the screen to move the camera. It has the ability to zoom in and out, pan away from the tank and snap back to it, and the ability to rotate around the object of interest.
                     </li>
                     <li>Material Assignment:
-                        I rebuilt the systems that were responsible for assigning the right textures for the blocks when being attached and detached from tanks. The old system was difficult to work with, as the previous coder had introduced multiple steps to reassigning materials, and it was a constant source of trouble. I later expanded the systems to handle assigning proper textures for the different damaged states of blocks. It was important to me to make it easy for others to add new kinds of blocks to the system, as well as make it easy to assign the proper materials.
+                        Our material assignement system was difficult to work with, as it required multiple steps to reassigning materials that overcomplicated what was normally a simple operation. I reworked it no longer need the redundant intermediate steps, and later expanded the systems to handle assigning proper textures for the different damaged states of blocks. With the new system, it was easy for others to add new kinds of blocks to the system, as well as make it easy to assign the proper materials to specific tanks.
                     </li>
                 </ul>
             </div>
+            
+            <div class="title-container">
+                <h2>House of Sin</h2>    
+            </div>
+            <div class="img-container">
+                <img src="data/Pictures/HouseOfSin.png" alt="Image of DELETE SYSTEM 32 ending">
+                <a href="https://chowr.itch.io/house-of-sin">
+                    View game on itch.io
+                </a>
+            </div>
+            <div class="container">
+                <p class="description">"House of Sin" is a horror-inspired "shoot em up" game, where you play as a demon hunter tasked with exorcising the reincarnations of the 7 Deadly Sins that have taken hold of a house. Through each demon you manage to defeat, you are further burdened by their curse, but are also given the power to break them for a short time to gain supernatural abilities like slowing down time. Built in Unity as part of IGDA Clark's 48 hr Halloween Jam 2024.</p>
+                <p>I was one of the programmers for this game.</p>
+                <p>My features:</p>
+                <ul>
+                    <li>All the boss code for the two major bosses in the game, Wrath and Gluttony.</li>
+                    <li>A finite state machine to cycle different boss phases, resulting in dynamic gameplay exemplifying the characteristics of the bosses.</li>
+                    <li>Event-driven architecture to keep each aspect of the game loosely coupled, and quick to iterate upon.</li>
+                </ul>
+            </div>
+
             <div class="title-container">
                 <h2>DELETE SYSTEM 32</h2>    
             </div>
             <div class="img-container">
                     <img src="data/Pictures/DelSys32Title.png" alt="Image of DELETE SYSTEM 32 ending">
-                    <a href="pages/WebBuilds/DELETESYSTEM32_V2.2_WEB/delSys32.html"> Play It Now!</a>
                     <a href="https://ildarsupron.itch.io/c-delete-system-32">
                         View game on itch.io
                     </a>
@@ -88,41 +112,14 @@
                     
             <!-- add link to game and image -->
             <div class="container">
-                <p class="description">"DELETE SYSTEM 32" is a sci-fi, shmup game where you play as a rogue computer virus attempting to destroy a computer's operating system. You are thwarted by the system's antivirus software, and must destroy it to achieve your goal. Built in Unity as part of IGDA Clark's 48 hr 2024 February Frenzy Game Jam</p>
+                <p class="description">"DELETE SYSTEM 32" is a sci-fi, shmup game where you play as a rogue computer virus attempting to destroy a computer's operating system. You are thwarted by the system's antivirus software, and must destroy it to achieve your goal. Built in Unity as part of IGDA Clark's 48 hr February Frenzy Game Jam 2024</p>
                 <p>I was the sole programmer for this game.</p>
                 <p>Game features:</p>
                 <ul>
+                    <li>Procedurally generation of the towers and enemy spawners in the playspace, making each play through slightly different than the last.</li>
                     <li>A finite state machine to cycle different enemy AI behaviors.</li>
-                    <li>Procedurally generating the towers and enemy spawners in the playspace.</li>
-                    <li>Making the screen endlessly scroll.</li>
-                    <li>A system for powerups.</li>
-                    <li>Cardinal movement system, and the ability to freely rotate to aim.</li>
-                    <li>Modular UI components for non-programmers to build UI with.</li>
-                </ul>
-            </div>
-            
-            <div class="title-container">
-                <h2>Ship Shoot</h2>
-            </div>
-            <div class="img-container">
-                <img style="height: 10cm;" src="data/Pictures/ShipShootTitle.png" alt="Image of Ship Shoot">
-                <a href="https://chowr.itch.io/ship-shoot">
-                    View game on itch.io
-                </a>
-            </div>
-            <div class="container">
-                <p class="description">"Ship Shoot" is a sci-fi, arcade, shmup game where you are a traveling combat ship. You are confronted by waves of enemy ships that attempt to shoot you down.</p>
-                <p>This was my first game, I made it in two weeks during the "My First Game Jam" jam on Itch.io. It was my first time trying to create a playable game using Scratch. Every asset and feature was made by me. </p>
-                <p> It taught me many of the finer details of how video games work from an almost no engine baseline, and it's a reminder of how far I've come, and how much I understood even without much background in programming at the time.
-                </p>
-
-                <p>It features:</p>
-                <ul>
-                    <li>Custom hit detection</li>
-                    <li>Custom entity tracking system</li>
-                    <li>Custom projectile object system</li>
-                    <li>Custom Enemy AI</li>
-                    <li>Custom Text Printing</li>
+                    <li>An endlessly scrolling screen to emulate old arcade games, a feature not native to Unity.</li>
+                    <li>A drop table system for random powerups.</li>
                 </ul>
             </div>
             </div>
