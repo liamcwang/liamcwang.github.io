@@ -25,7 +25,7 @@ header h1 {
     font-size: 36pt;
     max-width: 1200px;
 
-    color: #dbdbdb;
+    color: #eeeeee;
     text-decoration: none;
     text-decoration-thickness: 0px;
 
@@ -55,14 +55,14 @@ h2 {
 .header-link {
     display: inline-block;
     margin: 5px;
-    border-color: #dbdbdb;
+    border-color: #eeeeee;
     border-width: 3px;
     border-style: solid;
     padding: .2cm;
 }
 
 .header-link a {
-    color: #dbdbdb;
+    color: #eeeeee;
 }
 
 .container {
@@ -126,7 +126,7 @@ h2 {
 }
 
 .content {
-    background-color: #dbdbdb;
+    background-color: #eeeeee;
     max-width: 1000px;
     margin-left: auto;
     margin-right: auto;
